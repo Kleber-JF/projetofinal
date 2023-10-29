@@ -25,7 +25,8 @@ export const CardText = styled.div`
   }
 
   p {
-    font-weight: 400;
+    line-height: 22px;
+    font-weight: 100;
     font-size: 14px;
   }
 `

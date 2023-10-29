@@ -1,6 +1,6 @@
 import estrela from '../../assets/images/estrela.png'
 import { Card, CardTextBox, CardTitle, Infos } from './styles'
-import { TagContainer, TagLink } from '../Tag/styles'
+import { Nota, TagContainer, TagLink } from '../Tag/styles'
 
 type Props = {
   nome: string
@@ -31,10 +31,10 @@ export const RestaurantCard = ({
     <CardTextBox>
       <CardTitle>
         <h3>{nome}</h3>
-        <span>
+        <Nota>
           {nota}
           <img src={estrela} alt="estrela" />
-        </span>
+        </Nota>
       </CardTitle>
       <p>{descricao}</p>
       <TagLink to={`${url}`}>Saiba mais</TagLink>

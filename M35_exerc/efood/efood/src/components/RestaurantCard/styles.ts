@@ -7,8 +7,11 @@ export const Card = styled.div`
   margin-bottom: 40px;
   position: relative;
 
-  img {
+  > img {
     margin-bottom: -4px;
+    width: 472px;
+    height: 216px;
+    object-fit: cover;
   }
 `
 
@@ -20,8 +23,6 @@ export const CardTextBox = styled.div`
 
   p {
     margin-bottom: 16px;
-    font-size: 10px;
-    line-height: 22px;
   }
 `
 
@@ -29,6 +30,17 @@ export const CardTitle = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+  font-weight: bold;
+
+  > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > img {
+      margin-left: 8px;
+    }
+  }
 `
 export const Infos = styled.div`
   position: absolute;
