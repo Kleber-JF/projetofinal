@@ -9,7 +9,7 @@ export const CardContainer = styled.div`
 
   img {
     width: 304px;
-    height: 168px;
+    height: 167px;
     margin-bottom: -4px;
     object-fit: cover;
   }
@@ -53,7 +53,7 @@ export const Modal = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.73);
+    background-color: rgba(0, 0, 0, 0.8);
   }
 `
 
@@ -102,6 +102,7 @@ export const ModalText = styled.div`
 
   button {
     max-width: 218px;
+    height: 24px;
     margin-top: 0;
   }
 `

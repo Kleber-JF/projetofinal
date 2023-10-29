@@ -10,7 +10,7 @@ export const Card = styled.div`
   > img {
     margin-bottom: -4px;
     width: 472px;
-    height: 216px;
+    height: 217px;
     object-fit: cover;
   }
 `
@@ -36,6 +36,8 @@ export const CardTitle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+    font-size: 18px;
 
     > img {
       margin-left: 8px;
