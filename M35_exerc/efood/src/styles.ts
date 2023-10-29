@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const cores = {
   vermelhoClaro: '#E66767',
@@ -25,4 +25,15 @@ export const GlobalCss = createGlobalStyle`
     width: 100%;
     margin: 0 auto;
   }
+`
+export const BotaoAdicionar = styled.button`
+  margin-top: 8px;
+  padding: 4px 0;
+  width: 100%;
+  color: ${cores.vermelhoClaro};
+  background-color: ${cores.begeEscuro};
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
 `

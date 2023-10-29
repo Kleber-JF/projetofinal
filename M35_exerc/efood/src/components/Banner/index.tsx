@@ -1,11 +1,16 @@
-import fundo_restaurante from '../../assets/images/fundo_restaurante.png'
 import { ImagemBanner } from './styles'
 
-const Banner = () => (
-  <ImagemBanner style={{ backgroundImage: `url(${fundo_restaurante})` }}>
+type Props = {
+  foto: string
+  categoria: string
+  nome: string
+}
+
+const Banner = ({ foto, categoria, nome }: Props) => (
+  <ImagemBanner style={{ backgroundImage: `url(${foto})` }}>
     <div className="container">
-      <h4>Italiana</h4>
-      <h3>La Dolce Vita Trattoria</h3>
+      <h4>{categoria}</h4>
+      <h3>{nome}</h3>
     </div>
   </ImagemBanner>
 )

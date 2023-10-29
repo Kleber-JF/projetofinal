@@ -11,8 +11,8 @@ const Footer = () => (
       </FooterImages>
       <p>
         A efood é uma plataforma para divulgação de estabelecimentos, a
-        responsabilidade pela entrega, qualidade
-        <br /> dos produtos é toda do estabelecimento contratado.{' '}
+        responsabilidade pela entrega, qualidade dos produtos é toda do
+        estabelecimento contratado.{' '}
       </p>
     </div>
   </Rodape>

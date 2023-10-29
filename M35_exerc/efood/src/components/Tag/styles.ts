@@ -5,23 +5,17 @@ import { Link } from 'react-router-dom'
 
 export const TagContainer = styled.div<Props>`
   background-color: ${cores.vermelhoClaro};
-  color: ${cores.begeEscuro};
-  font-size: 12px;
+  color: ${cores.branco};
+  font-size: 16px;
   font-weight: bold;
   padding: 4px 6px;
   display: inline-block;
-  margin-left: 8px;
 `
 
 export const TagLink = styled(Link)`
   text-decoration: none;
-  color: ${cores.begeEscuro};
+  color: ${cores.branco};
   background-color: ${cores.vermelhoClaro};
   padding: 4px 6px;
   display: inline-block;
-  font-size: 14px;
-`
-
-export const Nota = styled.span`
-  font-weight: bold;
 `

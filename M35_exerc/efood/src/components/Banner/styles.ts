@@ -8,6 +8,18 @@ export const ImagemBanner = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   font-weight: bold;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    opacity: 0.56;
+  }
 
   .container {
     height: 280px;
@@ -17,6 +29,7 @@ export const ImagemBanner = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    z-index: 1;
 
     h4 {
       font-weight: 100;

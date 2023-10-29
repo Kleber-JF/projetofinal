@@ -1,9 +1,9 @@
-import Prato from '../../models/Prato'
 import PratoCard from '../PratoCard'
 import { CardapioList } from './styles'
+import { PratoItem } from '../../pages/Home'
 
 export type Props = {
-  pratos: Prato[]
+  pratos: PratoItem[]
 }
 
 const MenuLista = ({ pratos }: Props) => (
@@ -14,7 +14,10 @@ const MenuLista = ({ pratos }: Props) => (
           <PratoCard
             descricao={prato.descricao}
             nome={prato.nome}
-            image={prato.image}
+            foto={prato.foto}
+            preco={prato.preco}
+            id={prato.id}
+            porcao={prato.porcao}
           />
         </li>
       ))}
