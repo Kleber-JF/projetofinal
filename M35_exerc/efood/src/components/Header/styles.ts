@@ -22,5 +22,10 @@ export const Imagem = styled.div`
     width: 539px;
     text-align: center;
     font-size: 36px;
+
+    @media (min-width: 320px) and (max-width: 767px) {
+      width: 280px;
+      font-size: 28px;
+    }
   }
 `

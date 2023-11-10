@@ -31,6 +31,10 @@ export const ImagemBanner = styled.div`
     align-items: flex-start;
     z-index: 1;
 
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+
     h4 {
       font-weight: 100;
     }

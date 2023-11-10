@@ -1,5 +1,5 @@
 import PratoCard from '../PratoCard'
-import { CardapioList } from './styles'
+import { CardapioList, MenuItem } from './styles'
 import { PratoItem } from '../../pages/Home'
 
 export type Props = {
@@ -10,7 +10,7 @@ const MenuLista = ({ pratos }: Props) => (
   <div className="container">
     <CardapioList>
       {pratos.map((prato) => (
-        <li key={prato.id}>
+        <MenuItem key={prato.id}>
           <PratoCard
             descricao={prato.descricao}
             nome={prato.nome}
@@ -20,7 +20,7 @@ const MenuLista = ({ pratos }: Props) => (
             porcao={prato.porcao}
             prato={prato}
           />
-        </li>
+        </MenuItem>
       ))}
     </CardapioList>
   </div>

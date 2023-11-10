@@ -16,6 +16,10 @@ export const Imagem = styled.div`
     align-items: center;
     padding-top: 56px;
     padding-bottom: 56px;
+
+    @media (max-width: 1024px) {
+      width: 80%;
+    }
   }
 
   img {

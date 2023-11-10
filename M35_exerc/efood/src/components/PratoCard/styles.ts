@@ -2,15 +2,19 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const CardContainer = styled.div`
-  width: 320px;
-  height: 338px;
+  max-width: 320px;
+  max-height: 338px;
+  width: 100%;
+  height: 100%;
   position: relative;
   padding: 8px;
   background-color: ${cores.vermelhoClaro};
 
   img {
-    width: 304px;
-    height: 167px;
+    max-width: 304px;
+    max-height: 167px;
+    width: 100%;
+    height: 100%;
     margin-bottom: -4px;
     object-fit: cover;
   }
@@ -69,6 +73,10 @@ export const ModalContent = styled.div`
   flex-direction: column;
   align-items: flex-end;
 
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+
   > img {
     width: 16px;
     height: 16px;
@@ -88,11 +96,18 @@ export const ModalText = styled.div`
   display: flex;
   padding: 8px 32px 32px 32px;
   column-gap: 24px;
+  width: 100%;
+  align-items: center;
 
   img {
     width: 280px;
     height: 280px;
     object-fit: cover;
+
+    @media (max-width: 768px) {
+      width: 180px;
+      height: 180px;
+    }
   }
 
   p {
@@ -101,6 +116,11 @@ export const ModalText = styled.div`
     line-height: 22px;
     font-size: 14px;
     margin: 16px 0;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      line-height: 18px;
+    }
   }
 
   button {
