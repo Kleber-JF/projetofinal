@@ -1,8 +1,9 @@
 import { useParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import Banner from '../../components/Banner'
 import HeaderSec from '../../components/HeaderSec'
 import MenuLista from '../../components/MenuList'
-import { useEffect, useState } from 'react'
+import Cart from '../../components/Cart'
 import { Restaurante } from '../Home'
 
 const RestaurantePage = () => {
@@ -31,6 +32,7 @@ const RestaurantePage = () => {
         nome={restaurante.titulo}
       />
       <MenuLista pratos={restaurante.cardapio} />
+      <Cart />
     </>
   )
 }

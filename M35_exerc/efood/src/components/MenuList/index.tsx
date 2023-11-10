@@ -18,6 +18,7 @@ const MenuLista = ({ pratos }: Props) => (
             preco={prato.preco}
             id={prato.id}
             porcao={prato.porcao}
+            prato={prato}
           />
         </li>
       ))}

@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { BotaoAdicionar } from '../../styles'
 import {
   CardContainer,
@@ -7,8 +9,9 @@ import {
   ModalText
 } from './styles'
 
-import { useState } from 'react'
 import close from '../../assets/images/close.png'
+import { add, open } from '../../store/reducers/cart'
+import { PratoItem } from '../../pages/Home'
 
 type Props = {
   foto: string
@@ -17,6 +20,7 @@ type Props = {
   nome: string
   descricao: string
   porcao: string
+  prato: PratoItem
 }
 
 type ModalState = {
@@ -30,14 +34,21 @@ export const formataPreco = (preco = 0) => {
   }).format(preco)
 }
 
-const PratoCard = ({ nome, descricao, foto, preco, porcao }: Props) => {
+const PratoCard = ({ nome, descricao, foto, preco, porcao, prato }: Props) => {
   const [modal, setModal] = useState<ModalState>({
     isVisible: false
   })
 
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    dispatch(add(prato))
+    dispatch(open())
+  }
+
   const getPratoDescription = (descricao: string) => {
-    if (descricao.length > 245) {
-      return descricao.slice(0, 242) + '...'
+    if (descricao.length > 175) {
+      return descricao.slice(0, 172) + '...'
     }
     return descricao
   }
@@ -71,7 +82,7 @@ const PratoCard = ({ nome, descricao, foto, preco, porcao }: Props) => {
                 {descricao} <br />
                 <br /> Serve: de {porcao}
               </p>
-              <BotaoAdicionar type="button">
+              <BotaoAdicionar type="button" onClick={() => addToCart()}>
                 Adicionar ao carrinho - {formataPreco(preco)}
               </BotaoAdicionar>
             </div>

@@ -22,6 +22,12 @@ export const Imagem = styled.div`
     width: 125px;
     margin-left: 72px;
   }
+
+  span {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `
 export const LinkHome = styled(Link)`
   text-decoration: none;

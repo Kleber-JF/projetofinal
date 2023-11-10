@@ -3,6 +3,7 @@ import { cores } from '../../styles'
 
 export const CardContainer = styled.div`
   width: 320px;
+  height: 338px;
   position: relative;
   padding: 8px;
   background-color: ${cores.vermelhoClaro};
@@ -29,6 +30,8 @@ export const CardText = styled.div`
   p {
     font-weight: 400;
     font-size: 14px;
+    line-height: 22px;
+    width: 304px;
   }
 `
 
@@ -58,11 +61,10 @@ export const Modal = styled.div`
 `
 
 export const ModalContent = styled.div`
-  max-width: 960px;
   position: relative;
   z-index: 1;
   background-color: ${cores.vermelhoClaro};
-  color: ${cores.begeEscuro};
+  color: ${cores.branco};
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -94,9 +96,10 @@ export const ModalText = styled.div`
   }
 
   p {
+    height: 176px;
+    width: 656px;
     line-height: 22px;
     font-size: 14px;
-    font-weight: 100;
     margin: 16px 0;
   }
 
